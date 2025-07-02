@@ -24,9 +24,15 @@ int main() {
     } else if (pokemon_selection == 3) {
         cout << "Charmander is a firey choice!" << endl;
     } else {
-        cout << "invalid input select 1-3" << endl;
+        cout << "Invalid input select 1-3" << endl;
     }
 
-    
+    cout << "Ah, an excellent choice!" << endl;
+    cout << "But beware, Trainer," << endl;
+    cout << "this is only the beginning." << endl;
+    cout << "Your journey is about to unfold." << endl;
+    cout << "Now let’s see if you’ve got what it takes to keep going!" << endl;
+    cout << "Good luck, and remember… Choose wisely!" << endl;
+        
     return 0;
 }
