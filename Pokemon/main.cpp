@@ -3,6 +3,13 @@ using namespace std;
 
 string player_name = "";
 int pokemon_selection = 0;
+enum class PokemonChoice {
+    InvalidChoice,
+    Charmander,
+    Bulbasaur,
+    Squirtle
+};
+string starter_pokemon = "";
 
 int main() {
     cout << "Trainer! Before you embark on your journey," << endl;
@@ -11,23 +18,47 @@ int main() {
 
     cout << "Welcome to the world of pokemon, I am Professor Oak!" << endl;
     cout << "Before your jouney can begin select a pokemon!" << endl;
-    cout << "1. Bulbasaur" << endl;
-    cout << "2. Squrtle" << endl;
-    cout << "3. Charmander" << endl;
-    cin >> pokemon_selection;
+    cout << "1. Bulbasaur " << endl;
+    cout << "2. Squirtle " << endl;
+    cout << "3. Charmander " << endl;
+    PokemonChoice chosen_pokemon = InvalidChoice;
+    int choice = 0;
 
-    switch (pokemon_selection) {
-         case 1:
-            cout << "great choice, Bulbasaur is the only right option!" << endl;
-            break;
-         case 2:
-            cout << "squirtle is always a great option!" << endl;
-            break;
-         case 3: 
-            cout << "Charmander is a firey choice!" << endl;
-            break;
-         default: 
-            cout << "Invalid input select 1-3" << endl;
+    cin >> choice;
+
+    switch (choice) {
+    case 1:
+        chosen_pokemon = Bulbasaur;
+        break;
+    case 2:
+        chosen_pokemon = Squirtle;
+        break;
+    case 3:
+        chosen_pokemon = Charmander;
+        break;
+    default:
+        chosen_pokemon = InvalidChoice;
+        break;
+    }
+
+    switch (chosen_pokemon) {
+    case Bulbasaur:
+        cout << "great choice, Bulbasaur  is the only right option!" << endl;
+        starter_pokemon = "Bulbasaur ";
+        break;
+    case Squirtle:
+        cout << "Squirtle  is always a great option!" << endl;
+        starter_pokemon = "Squirtle ";
+        break;
+    case Charmander:
+        cout << "Charmander  is a firey choice!" << endl;
+        starter_pokemon = "Charmander ";
+        break;
+    default:
+        cout << "Professor Oak: Hmm, that doesn't seem right. Let me choose for you..." << endl;
+        cout << "Professor Oak: Just kidding! Let's go with Pikachu, the surprise guest!\n";
+        starter_pokemon = "Pikachu";
+        break;
     }
 
     cout << "But beware, Trainer," << endl;
