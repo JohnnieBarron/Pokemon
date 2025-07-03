@@ -81,7 +81,7 @@ int main() {
     HealingItems healing_choice = HealingItems::Potion;
     BattleItems battle_choice = BattleItems::Elixir;
 
-    // Step 3: Output healing item effects
+    
     cout << "Using Healing Item: ";
     switch (healing_choice) {
     case HealingItems::Potion:
@@ -92,7 +92,7 @@ int main() {
         break;
     }
 
-    // Output battle item effects
+    
     cout << "Using Battle Item: ";
     switch (battle_choice) {
     case BattleItems::Potion:
